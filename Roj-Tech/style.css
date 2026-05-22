@@ -1803,3 +1803,55 @@ p {
         transform: translateX(-50%); /* Shifts loop matrix flawlessly */
     }
 }
+
+/* Chat Icon ki Styling - Screen par Fixed */
+#custom-chat-icon {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 60px !important;
+    height: 60px !important;
+    background-color: #dc143c !important; /* Red Color */
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+    z-index: 2147483647 !important; /* Sabse upar dikhne ke liye */
+}
+
+/* Chatbot Window ki Styling - Icon ke upar Fixed */
+#custom-chatbot-window {
+    position: fixed !important;
+    bottom: 90px !important; 
+    right: 20px !important;
+    width: 350px !important;
+    height: 500px !important;
+    background-color: white !important;
+    border-radius: 12px !important;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.25) !important;
+    z-index: 2147483647 !important;
+    overflow: hidden !important;
+    flex-direction: column !important;
+}
+
+/* Header Styling */
+#chatbot-header {
+    background-color: #dc143c;
+    color: white;
+    padding: 12px 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chatbot-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}

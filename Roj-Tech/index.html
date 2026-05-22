@@ -90,7 +90,8 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Build Your website and App  with Roj Tech</h1>
+                    <h1>Build your app and website with Roj tech
+                    </h1>
                     <p style="color: #0f172a;">We create professional websites and mobile applications to help businesses grow online.</p>
                     <div class="hero-buttons">
                         <a href="#Overview" class="btn btn-primary">Get Started</a>
@@ -427,9 +428,9 @@
                 <img src="assets/monika.png" alt="CRM Expert">
             </div>
             <div class="crm-info">
-                <h4>Monika Gupta</h4>
+                <h4>Divyakant Dube</h4>
                 <p>CRM Manager</p>
-                <span class="edu-tag mba">BBA Marketing</span>
+                <span class="edu-tag mba">B.Tech</span>
             </div>
         </div>
 
@@ -582,6 +583,8 @@
         </div>
     </section>
 
+    
+
     <!-- Footer -->
   <footer class="cyber-footer">
     <div class="footer-glow-bg">
@@ -637,7 +640,6 @@
         </div>
     </div>
 
-   
 
     <div class="footer-bottom">
         <div class="bottom-legal">
@@ -729,7 +731,43 @@ window.onclick = function(event) {
     if (event.target == modal) {
         closeContactPopup();
     }
+} 
+
+function toggleChatbot() {
+    const chatWindow = document.getElementById('custom-chatbot-window');
+    const iframe = document.getElementById('chatbot-iframe');
+    
+    // TYPO FIXED: style.style ki jagah style.display check hoga
+    if (chatWindow.style.display === 'none' || chatWindow.style.display === '') {
+        // Window open karte waqt iframe ko reload karega taaki pichli chat history clear ho jaye
+        iframe.src = iframe.src; 
+        chatWindow.style.display = 'block';
+    } else {
+        chatWindow.style.display = 'none';
+    }
 }
+
+
     </script>
+
+
+<div id="custom-chat-icon" onclick="toggleChatbot()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30px" height="30px">
+        <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+    </svg>
+</div>
+
+<div id="custom-chatbot-window" style="display: none;">
+    <div id="chatbot-header" style="height: 50px; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; background: #111; color: white;">
+        <span>Roj Tech AI Assistant</span>
+        <button onclick="toggleChatbot()" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
+    </div>
+    
+    <iframe id="chatbot-iframe" 
+            src="https://roj-tech-assistant.vercel.app/" 
+            width="100%" 
+            style="height: calc(100% - 50px); border:none;">
+    </iframe>
+</div>
 </body>
 </html>
